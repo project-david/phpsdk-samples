@@ -1,0 +1,23 @@
+{
+    "name": "gravity-legal/phpsdk-samples",
+    "description": "Samples for use with gravity-legal/phpsdk package",
+    "type": "project",
+    "require": {
+        "gravity-legal/phpsdk": "^1.00",
+        "fakerphp/faker": "^1.14",
+        "netresearch/jsonmapper": "^4.0",
+        "symfony/console": "^5.2"
+    },
+    "autoload": {"psr-4":  {
+                            "Console\\": "src"
+                           }, 
+                 "classmap": ["src"]
+                },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Manoj K Srivastava",
+            "email": "manoj.srivastava@gmail.com"
+        }
+    ]
+}
