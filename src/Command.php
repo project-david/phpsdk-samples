@@ -168,5 +168,28 @@ class Command extends SymfonyCommand
         $result = $result . 'Balance After AddToPaylink: ' . (float) $paylink->balance->totalOutstanding / 100 . PHP_EOL;
         return $result;
     }
+    protected function updateToPaylink(InputInterface $input, OutputInterface $output)
+    {
+        // outputs multiple lines to the console (adding "\n" at the end of each line)
+        $output -> writeln([
+            '====**** Run Samples Console App ****====',
+            '==========================================',
+            '',
+        ]);
+        
+        // outputs a message without adding a "\n" at the end of the line
+        $output -> write($this -> getUpdatePaylink() .  PHP_EOL);
+    }
+    protected function getUpdatePaylink()
+    {
+        $paylink = $this->gService->GetPaylink("87f6dd2e-d8b4-41dd-a609-3e36e414dce2");
+        $result = 'Paylink: ' . PHP_EOL . json_encode($paylink) . PHP_EOL;
+        $initialBalance = (float)$paylink->balance->totalOutstanding/100;
+        $result = $result . 'Paylink Initial Balance : ' . $initialBalance . PHP_EOL;
+        $restResponse = $this->gService->UpdatePaylink($paylink, 1000.00, 2000.00);
+        $paylink = $this->gService->GetPaylink("87f6dd2e-d8b4-41dd-a609-3e36e414dce2");
+        $result = $result . 'Balance After UpdatePaylink: ' . (float) $paylink->balance->totalOutstanding / 100 . PHP_EOL;
+        return $result;
+    }
 
 }
