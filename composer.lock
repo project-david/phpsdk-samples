@@ -73,16 +73,16 @@
         },
         {
             "name": "gravity-legal/phpsdk",
-            "version": "1.00",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/project-david/phpsdk.git",
-                "reference": "0773171317d873086c3a56d4daec3ff1b58e0a93"
+                "reference": "9bb651ad62203ae424f122362aa927e3a231c29d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/project-david/phpsdk/zipball/0773171317d873086c3a56d4daec3ff1b58e0a93",
-                "reference": "0773171317d873086c3a56d4daec3ff1b58e0a93",
+                "url": "https://api.github.com/repos/project-david/phpsdk/zipball/9bb651ad62203ae424f122362aa927e3a231c29d",
+                "reference": "9bb651ad62203ae424f122362aa927e3a231c29d",
                 "shasum": ""
             },
             "require": {
@@ -91,9 +91,20 @@
             },
             "require-dev": {
                 "fakerphp/faker": "^1.14",
+                "orchestra/platform": "^5.1",
                 "phpunit/phpunit": "^9.5"
             },
             "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "GravityLegal\\GravityLegalAPI\\GravityLegalServiceProvider"
+                    ],
+                    "aliases": {
+                        "GravityLegal": "GravityLegal\\GravityLegalAPI\\Facades\\GravityLegal"
+                    }
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "GravityLegal\\GravityLegalAPI\\": "src/"
@@ -112,9 +123,9 @@
             "description": "PHP SDK for GravityLegalAPI",
             "support": {
                 "issues": "https://github.com/project-david/phpsdk/issues",
-                "source": "https://github.com/project-david/phpsdk/tree/1.00"
+                "source": "https://github.com/project-david/phpsdk/tree/1.0.4"
             },
-            "time": "2021-04-22T16:42:51+00:00"
+            "time": "2021-05-06T15:30:57+00:00"
         },
         {
             "name": "mashape/unirest-php",
@@ -268,16 +279,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v5.2.6",
+            "version": "v5.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "35f039df40a3b335ebf310f244cb242b3a83ac8d"
+                "reference": "90374b8ed059325b49a29b55b3f8bb4062c87629"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/35f039df40a3b335ebf310f244cb242b3a83ac8d",
-                "reference": "35f039df40a3b335ebf310f244cb242b3a83ac8d",
+                "url": "https://api.github.com/repos/symfony/console/zipball/90374b8ed059325b49a29b55b3f8bb4062c87629",
+                "reference": "90374b8ed059325b49a29b55b3f8bb4062c87629",
                 "shasum": ""
             },
             "require": {
@@ -345,7 +356,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v5.2.6"
+                "source": "https://github.com/symfony/console/tree/v5.2.7"
             },
             "funding": [
                 {
@@ -361,7 +372,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-03-28T09:42:18+00:00"
+            "time": "2021-04-19T14:07:32+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
